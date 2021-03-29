@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "c9ce96fc-5ea6-4449-bc77-78f73464825d",
+		"name": "deel-backend-endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "contracts by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/contracts/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"contracts",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contracts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/contracts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"contracts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "jobs unpaid",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/jobs/unpaid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"jobs",
+						"unpaid"
+					],
+					"query": [
+						{
+							"key": "profile_id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pay for a job",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deposit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"amount\" : 1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/balances/deposit/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"balances",
+						"deposit",
+						"4"
+					],
+					"query": [
+						{
+							"key": "profile_id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adming profession",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/admin/best-profession",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"best-profession"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
